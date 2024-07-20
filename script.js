@@ -25,10 +25,23 @@ arr.forEach(function (elem, index) {
 
 document.querySelector("#stories").innerHTML = clutter;
 
+var grow = 0;
 document.querySelector("#stories").addEventListener("click", function (dets) {
   // console.log();
   document.querySelector("#full-scr").style.display = "block";
   document.querySelector("#full-scr").style.backgroundImage = `url(${
     arr[dets.target.id].img
   })`;
+
+  setTimeout(function () {
+    document.querySelector("#full-scr").style.display = "none";
+  }, 3000);
+  if (grow < 100) {
+    setInterval(function () {
+      document.querySelector("#growth").style.width = `${grow}%`;
+      grow++;
+    }, 30);
+  } else {
+    grow = 0;
+  }
 });

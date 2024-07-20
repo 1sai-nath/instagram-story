@@ -32,7 +32,21 @@ body {
   background-color: red;
   display: none;
   background-size: cover;
+  padding-top: 20px;
   background-position: center;
+}
+
+#progress{
+  height: 5px;
+  width: 100%;
+  background-color: #9c1010b9;
+}
+
+#growth{
+  width: 50%;
+  height: 100%;
+  background-color: #ffffff7a;
+  border-radius: 30px;
 }
 
 #stories {
